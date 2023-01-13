@@ -32,7 +32,27 @@ namespace VocabMaster
 
         public bool AnsweredCorrect(Dataset other)
         {
-            return this.solution.ToLower().Trim().Replace(" ", "") == other.solution.ToLower().Trim().Replace(" ", "") && this.description.ToLower().Trim().Replace(" ", "") == other.description.ToLower().Trim().Replace(" ", "");
+            string[] correctSolutions = this.solution.Split(';');
+            string[] correctDescriptions = this.description.Split(';');
+            bool solutionCorrect = false;
+            bool descriptionCorrect = false;
+
+            foreach (string s in correctSolutions)
+            {
+                if (solutionCorrect = other.solution.ToLower().Trim().Replace(" ", "") == s.ToLower().Trim().Replace(" ", ""))
+                {
+                    break;
+                }
+            }
+            foreach (string s in correctDescriptions)
+            {
+                if (descriptionCorrect = other.description.ToLower().Trim().Replace(" ", "") == s.ToLower().Trim().Replace(" ", ""))
+                {
+                    break;
+                }
+            }
+
+            return solutionCorrect && descriptionCorrect;
         }
 
         public override bool Equals(object obj)

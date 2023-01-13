@@ -32,18 +32,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadDatasetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createNewDatasetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editDatasetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createNewDatasetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanelTest = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonCheck = new System.Windows.Forms.Button();
-            this.textBoxAnswer = new System.Windows.Forms.TextBox();
-            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.textBoxResult = new System.Windows.Forms.TextBox();
-            this.labelQuestion = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
-            this.startTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonCheck = new System.Windows.Forms.Button();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
+            this.labelQuestion = new System.Windows.Forms.Label();
+            this.textBoxAnswer = new System.Windows.Forms.TextBox();
             this.buttonNext = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -87,14 +87,28 @@
             // loadDatasetToolStripMenuItem
             // 
             this.loadDatasetToolStripMenuItem.Name = "loadDatasetToolStripMenuItem";
-            this.loadDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadDatasetToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.loadDatasetToolStripMenuItem.Text = "Load Dataset";
             this.loadDatasetToolStripMenuItem.Click += new System.EventHandler(this.loadDatasetToolStripMenuItem_Click);
+            // 
+            // createNewDatasetToolStripMenuItem
+            // 
+            this.createNewDatasetToolStripMenuItem.Name = "createNewDatasetToolStripMenuItem";
+            this.createNewDatasetToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.createNewDatasetToolStripMenuItem.Text = "Create new Dataset";
+            this.createNewDatasetToolStripMenuItem.Click += new System.EventHandler(this.createNewDatasetToolStripMenuItem_Click);
+            // 
+            // startTestToolStripMenuItem
+            // 
+            this.startTestToolStripMenuItem.Name = "startTestToolStripMenuItem";
+            this.startTestToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.startTestToolStripMenuItem.Text = "Start Test";
+            this.startTestToolStripMenuItem.Click += new System.EventHandler(this.startTestToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -108,16 +122,9 @@
             // editDatasetToolStripMenuItem
             // 
             this.editDatasetToolStripMenuItem.Name = "editDatasetToolStripMenuItem";
-            this.editDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editDatasetToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.editDatasetToolStripMenuItem.Text = "Edit Dataset";
             this.editDatasetToolStripMenuItem.Click += new System.EventHandler(this.editDatasetToolStripMenuItem_Click);
-            // 
-            // createNewDatasetToolStripMenuItem
-            // 
-            this.createNewDatasetToolStripMenuItem.Name = "createNewDatasetToolStripMenuItem";
-            this.createNewDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.createNewDatasetToolStripMenuItem.Text = "Create new Dataset";
-            this.createNewDatasetToolStripMenuItem.Click += new System.EventHandler(this.createNewDatasetToolStripMenuItem_Click);
             // 
             // tableLayoutPanelTest
             // 
@@ -143,6 +150,24 @@
             this.tableLayoutPanelTest.TabIndex = 1;
             this.tableLayoutPanelTest.Visible = false;
             // 
+            // textBoxResult
+            // 
+            this.textBoxResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxResult.Location = new System.Drawing.Point(3, 271);
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ReadOnly = true;
+            this.textBoxResult.Size = new System.Drawing.Size(221, 20);
+            this.textBoxResult.TabIndex = 5;
+            // 
+            // labelDescription
+            // 
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Location = new System.Drawing.Point(3, 134);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(63, 13);
+            this.labelDescription.TabIndex = 4;
+            this.labelDescription.Text = "Description:";
+            // 
             // buttonCheck
             // 
             this.buttonCheck.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -154,15 +179,6 @@
             this.buttonCheck.UseVisualStyleBackColor = true;
             this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
             // 
-            // textBoxAnswer
-            // 
-            this.textBoxAnswer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxAnswer.Location = new System.Drawing.Point(230, 3);
-            this.textBoxAnswer.Multiline = true;
-            this.textBoxAnswer.Name = "textBoxAnswer";
-            this.textBoxAnswer.Size = new System.Drawing.Size(221, 128);
-            this.textBoxAnswer.TabIndex = 3;
-            // 
             // textBoxDescription
             // 
             this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -171,15 +187,6 @@
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(221, 128);
             this.textBoxDescription.TabIndex = 4;
-            // 
-            // textBoxResult
-            // 
-            this.textBoxResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxResult.Location = new System.Drawing.Point(3, 271);
-            this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.ReadOnly = true;
-            this.textBoxResult.Size = new System.Drawing.Size(221, 20);
-            this.textBoxResult.TabIndex = 5;
             // 
             // labelQuestion
             // 
@@ -190,21 +197,14 @@
             this.labelQuestion.TabIndex = 0;
             this.labelQuestion.Text = "Question:";
             // 
-            // labelDescription
+            // textBoxAnswer
             // 
-            this.labelDescription.AutoSize = true;
-            this.labelDescription.Location = new System.Drawing.Point(3, 134);
-            this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(63, 13);
-            this.labelDescription.TabIndex = 4;
-            this.labelDescription.Text = "Description:";
-            // 
-            // startTestToolStripMenuItem
-            // 
-            this.startTestToolStripMenuItem.Name = "startTestToolStripMenuItem";
-            this.startTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.startTestToolStripMenuItem.Text = "Start Test";
-            this.startTestToolStripMenuItem.Click += new System.EventHandler(this.startTestToolStripMenuItem_Click);
+            this.textBoxAnswer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxAnswer.Location = new System.Drawing.Point(230, 3);
+            this.textBoxAnswer.Multiline = true;
+            this.textBoxAnswer.Name = "textBoxAnswer";
+            this.textBoxAnswer.Size = new System.Drawing.Size(221, 128);
+            this.textBoxAnswer.TabIndex = 3;
             // 
             // buttonNext
             // 

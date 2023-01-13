@@ -15,6 +15,8 @@ namespace VocabMaster
     public partial class FormMain : Form
     {
         List<Dataset> datasetList = null;
+
+        List<Dataset> notSelectedDataSet = null;
         bool testRunning = false;
         Dataset currentData = null;
         int questionsLeft = 0;
@@ -76,8 +78,9 @@ namespace VocabMaster
         {
             testRunning = true;
             tableLayoutPanelTest.Visible = true;
+            notSelectedDataSet = new List<Dataset>(datasetList);
 
-            Dataset ds = SelectRandomDataset(datasetList);
+            Dataset ds = SelectRandomDataset(notSelectedDataSet);
             currentData = ds;
             textBoxAskedQuestions.Text = "0";
             textBoxMistakes.Text = "0";
@@ -99,21 +102,14 @@ namespace VocabMaster
             this.index = index;
 
             Dataset ds = datasets[index];
-
-            if (ds.asked)
-            {
-                datasetList[index].asked = true;
-                return SelectRandomDataset(datasets);
-            }
-            else
-            {
-                datasetList[index].asked = true;
-                return ds;
-            }
+            ds.asked = true;
+            datasets.Remove(ds)
+            return ds;
         }
 
         private void buttonCheck_Click(object sender, EventArgs e)
         {
+            buttonCheck.Enabled = false;
             buttonNext.Visible = true;
             Dataset ds = new Dataset("", textBoxDescription.Text, textBoxAnswer.Text);
             if (currentData.AnsweredCorrect(ds))
@@ -131,10 +127,11 @@ namespace VocabMaster
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
+            buttonCheck.Enabled = true;
             buttonNext.Visible = false;
             if (--questionsLeft > 0)
             {
-                currentData = SelectRandomDataset(datasetList);
+                currentData = SelectRandomDataset(notSelectedDataSet);
 
                 SetTextBoxes(currentData);
             }
