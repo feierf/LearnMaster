@@ -11,3 +11,16 @@ N:\DEV\VocabMaster\VocabMaster\obj\Debug\VocabMaster.csproj.CoreCompileInputs.ca
 N:\DEV\VocabMaster\VocabMaster\obj\Debug\VocabMaster.exe
 N:\DEV\VocabMaster\VocabMaster\obj\Debug\VocabMaster.pdb
 N:\DEV\VocabMaster\VocabMaster\obj\Debug\VocabMaster.FormNewDataset.resources
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\bin\Debug\VocabMaster.exe.config
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\bin\Debug\VocabMaster.exe
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\bin\Debug\VocabMaster.pdb
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\obj\Debug\VocabMaster.csproj.AssemblyReference.cache
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\obj\Debug\VocabMaster.csproj.SuggestedBindingRedirects.cache
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\obj\Debug\VocabMaster.FormEditDataset.resources
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\obj\Debug\VocabMaster.FormMain.resources
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\obj\Debug\VocabMaster.FormNewDataset.resources
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\obj\Debug\VocabMaster.Properties.Resources.resources
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\obj\Debug\VocabMaster.csproj.GenerateResource.cache
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\obj\Debug\VocabMaster.csproj.CoreCompileInputs.cache
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\obj\Debug\VocabMaster.exe
+N:\DEV\LearnMaster\LearnMaster Source\VocabMaster\obj\Debug\VocabMaster.pdb

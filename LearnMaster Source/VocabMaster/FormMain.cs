@@ -102,13 +102,14 @@ namespace VocabMaster
 
             if (ds.asked)
             {
+                datasetList[index].asked = true;
                 return SelectRandomDataset(datasets);
             }
             else
             {
+                datasetList[index].asked = true;
                 return ds;
             }
-            datasetList[index].asked = true;
         }
 
         private void buttonCheck_Click(object sender, EventArgs e)
