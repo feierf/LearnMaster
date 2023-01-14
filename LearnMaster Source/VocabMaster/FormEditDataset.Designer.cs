@@ -34,6 +34,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveDatasetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,11 +42,13 @@
             this.textBoxQuestion = new System.Windows.Forms.TextBox();
             this.textBoxAnswer = new System.Windows.Forms.TextBox();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonSaveNew = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonSaveModified = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBoxDataset
@@ -89,6 +92,13 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Text = "Edit";
             // 
             // tableLayoutPanel1
             // 
@@ -102,7 +112,7 @@
             this.tableLayoutPanel1.Controls.Add(this.textBoxAnswer, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBoxDescription, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.buttonSaveNew, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.buttonSaveModified, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(169, 25);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -167,12 +177,6 @@
             this.textBoxDescription.Size = new System.Drawing.Size(444, 117);
             this.textBoxDescription.TabIndex = 5;
             // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
             // buttonSaveNew
             // 
             this.buttonSaveNew.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -184,16 +188,41 @@
             this.buttonSaveNew.UseVisualStyleBackColor = true;
             this.buttonSaveNew.Click += new System.EventHandler(this.buttonSaveNew_Click);
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.buttonSaveModified, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.buttonDelete, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(172, 372);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(444, 32);
+            this.tableLayoutPanel2.TabIndex = 7;
+            // 
             // buttonSaveModified
             // 
             this.buttonSaveModified.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSaveModified.Location = new System.Drawing.Point(172, 372);
+            this.buttonSaveModified.Location = new System.Drawing.Point(3, 3);
             this.buttonSaveModified.Name = "buttonSaveModified";
-            this.buttonSaveModified.Size = new System.Drawing.Size(444, 32);
-            this.buttonSaveModified.TabIndex = 7;
+            this.buttonSaveModified.Size = new System.Drawing.Size(216, 26);
+            this.buttonSaveModified.TabIndex = 8;
             this.buttonSaveModified.Text = "Save as Modified";
             this.buttonSaveModified.UseVisualStyleBackColor = true;
-            this.buttonSaveModified.Click += new System.EventHandler(this.buttonSaveModified_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonDelete.Location = new System.Drawing.Point(225, 3);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(216, 26);
+            this.buttonDelete.TabIndex = 9;
+            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // FormEditDataset
             // 
@@ -206,12 +235,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormEditDataset";
-            this.Text = "FormEditDataset";
+            this.Text = "Edit Dataset";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEditDataset_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,6 +263,8 @@
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.Button buttonSaveNew;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button buttonSaveModified;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }

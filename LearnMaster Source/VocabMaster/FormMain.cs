@@ -103,7 +103,7 @@ namespace VocabMaster
 
             Dataset ds = datasets[index];
             ds.asked = true;
-            datasets.Remove(ds)
+            datasets.Remove(ds);
             return ds;
         }
 
@@ -148,6 +148,12 @@ namespace VocabMaster
             textBoxAnswer.Text = "";
             textBoxDescription.Text = "";
 
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
         }
     }
 }

@@ -117,5 +117,15 @@ namespace VocabMaster
                 }
             }
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            listBoxDataset.Items.Remove(listBoxDataset.SelectedItem);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

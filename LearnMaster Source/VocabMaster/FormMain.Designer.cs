@@ -87,29 +87,30 @@
             // loadDatasetToolStripMenuItem
             // 
             this.loadDatasetToolStripMenuItem.Name = "loadDatasetToolStripMenuItem";
-            this.loadDatasetToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.loadDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadDatasetToolStripMenuItem.Text = "Load Dataset";
             this.loadDatasetToolStripMenuItem.Click += new System.EventHandler(this.loadDatasetToolStripMenuItem_Click);
             // 
             // createNewDatasetToolStripMenuItem
             // 
             this.createNewDatasetToolStripMenuItem.Name = "createNewDatasetToolStripMenuItem";
-            this.createNewDatasetToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.createNewDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createNewDatasetToolStripMenuItem.Text = "Create new Dataset";
             this.createNewDatasetToolStripMenuItem.Click += new System.EventHandler(this.createNewDatasetToolStripMenuItem_Click);
             // 
             // startTestToolStripMenuItem
             // 
             this.startTestToolStripMenuItem.Name = "startTestToolStripMenuItem";
-            this.startTestToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.startTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.startTestToolStripMenuItem.Text = "Start Test";
             this.startTestToolStripMenuItem.Click += new System.EventHandler(this.startTestToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -122,7 +123,7 @@
             // editDatasetToolStripMenuItem
             // 
             this.editDatasetToolStripMenuItem.Name = "editDatasetToolStripMenuItem";
-            this.editDatasetToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.editDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editDatasetToolStripMenuItem.Text = "Edit Dataset";
             this.editDatasetToolStripMenuItem.Click += new System.EventHandler(this.editDatasetToolStripMenuItem_Click);
             // 
