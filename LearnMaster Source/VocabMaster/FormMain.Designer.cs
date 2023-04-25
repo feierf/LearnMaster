@@ -1,4 +1,4 @@
-﻿namespace VocabMaster
+﻿namespace LearnMaster
 {
     partial class FormMain
     {
@@ -45,6 +45,7 @@
             this.labelQuestion = new System.Windows.Forms.Label();
             this.textBoxAnswer = new System.Windows.Forms.TextBox();
             this.buttonNext = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,6 +59,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanelTest.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +71,7 @@
             this.editToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(956, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -87,28 +89,28 @@
             // loadDatasetToolStripMenuItem
             // 
             this.loadDatasetToolStripMenuItem.Name = "loadDatasetToolStripMenuItem";
-            this.loadDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadDatasetToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.loadDatasetToolStripMenuItem.Text = "Load Dataset";
             this.loadDatasetToolStripMenuItem.Click += new System.EventHandler(this.loadDatasetToolStripMenuItem_Click);
             // 
             // createNewDatasetToolStripMenuItem
             // 
             this.createNewDatasetToolStripMenuItem.Name = "createNewDatasetToolStripMenuItem";
-            this.createNewDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createNewDatasetToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.createNewDatasetToolStripMenuItem.Text = "Create new Dataset";
             this.createNewDatasetToolStripMenuItem.Click += new System.EventHandler(this.createNewDatasetToolStripMenuItem_Click);
             // 
             // startTestToolStripMenuItem
             // 
             this.startTestToolStripMenuItem.Name = "startTestToolStripMenuItem";
-            this.startTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.startTestToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.startTestToolStripMenuItem.Text = "Start Test";
             this.startTestToolStripMenuItem.Click += new System.EventHandler(this.startTestToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -123,47 +125,49 @@
             // editDatasetToolStripMenuItem
             // 
             this.editDatasetToolStripMenuItem.Name = "editDatasetToolStripMenuItem";
-            this.editDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editDatasetToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.editDatasetToolStripMenuItem.Text = "Edit Dataset";
             this.editDatasetToolStripMenuItem.Click += new System.EventHandler(this.editDatasetToolStripMenuItem_Click);
             // 
             // tableLayoutPanelTest
             // 
             this.tableLayoutPanelTest.ColumnCount = 2;
-            this.tableLayoutPanelTest.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelTest.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelTest.Controls.Add(this.textBoxResult, 0, 2);
-            this.tableLayoutPanelTest.Controls.Add(this.labelDescription, 0, 1);
-            this.tableLayoutPanelTest.Controls.Add(this.buttonCheck, 1, 2);
-            this.tableLayoutPanelTest.Controls.Add(this.textBoxDescription, 1, 1);
-            this.tableLayoutPanelTest.Controls.Add(this.labelQuestion, 0, 0);
-            this.tableLayoutPanelTest.Controls.Add(this.textBoxAnswer, 1, 0);
-            this.tableLayoutPanelTest.Controls.Add(this.buttonNext, 1, 3);
+            this.tableLayoutPanelTest.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.58088F));
+            this.tableLayoutPanelTest.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.41912F));
+            this.tableLayoutPanelTest.Controls.Add(this.textBoxResult, 0, 3);
+            this.tableLayoutPanelTest.Controls.Add(this.labelDescription, 0, 2);
+            this.tableLayoutPanelTest.Controls.Add(this.buttonCheck, 1, 3);
+            this.tableLayoutPanelTest.Controls.Add(this.textBoxDescription, 1, 2);
+            this.tableLayoutPanelTest.Controls.Add(this.labelQuestion, 0, 1);
+            this.tableLayoutPanelTest.Controls.Add(this.textBoxAnswer, 1, 1);
+            this.tableLayoutPanelTest.Controls.Add(this.buttonNext, 1, 4);
+            this.tableLayoutPanelTest.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanelTest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelTest.Location = new System.Drawing.Point(343, 3);
+            this.tableLayoutPanelTest.Location = new System.Drawing.Point(409, 3);
             this.tableLayoutPanelTest.Name = "tableLayoutPanelTest";
-            this.tableLayoutPanelTest.RowCount = 4;
-            this.tableLayoutPanelTest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.13367F));
-            this.tableLayoutPanelTest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.13367F));
-            this.tableLayoutPanelTest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.86633F));
-            this.tableLayoutPanelTest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.86633F));
-            this.tableLayoutPanelTest.Size = new System.Drawing.Size(454, 420);
+            this.tableLayoutPanelTest.RowCount = 5;
+            this.tableLayoutPanelTest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.32803F));
+            this.tableLayoutPanelTest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.49503F));
+            this.tableLayoutPanelTest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.69384F));
+            this.tableLayoutPanelTest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.619379F));
+            this.tableLayoutPanelTest.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.619379F));
+            this.tableLayoutPanelTest.Size = new System.Drawing.Size(544, 503);
             this.tableLayoutPanelTest.TabIndex = 1;
             this.tableLayoutPanelTest.Visible = false;
             // 
             // textBoxResult
             // 
             this.textBoxResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxResult.Location = new System.Drawing.Point(3, 271);
+            this.textBoxResult.Location = new System.Drawing.Point(3, 408);
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.ReadOnly = true;
-            this.textBoxResult.Size = new System.Drawing.Size(221, 20);
+            this.textBoxResult.Size = new System.Drawing.Size(192, 20);
             this.textBoxResult.TabIndex = 5;
             // 
             // labelDescription
             // 
             this.labelDescription.AutoSize = true;
-            this.labelDescription.Location = new System.Drawing.Point(3, 134);
+            this.labelDescription.Location = new System.Drawing.Point(3, 316);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(63, 13);
             this.labelDescription.TabIndex = 4;
@@ -172,9 +176,9 @@
             // buttonCheck
             // 
             this.buttonCheck.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonCheck.Location = new System.Drawing.Point(230, 271);
+            this.buttonCheck.Location = new System.Drawing.Point(201, 408);
             this.buttonCheck.Name = "buttonCheck";
-            this.buttonCheck.Size = new System.Drawing.Size(221, 69);
+            this.buttonCheck.Size = new System.Drawing.Size(340, 42);
             this.buttonCheck.TabIndex = 2;
             this.buttonCheck.Text = "Check";
             this.buttonCheck.UseVisualStyleBackColor = true;
@@ -183,16 +187,16 @@
             // textBoxDescription
             // 
             this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxDescription.Location = new System.Drawing.Point(230, 137);
+            this.textBoxDescription.Location = new System.Drawing.Point(201, 319);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(221, 128);
+            this.textBoxDescription.Size = new System.Drawing.Size(340, 83);
             this.textBoxDescription.TabIndex = 4;
             // 
             // labelQuestion
             // 
             this.labelQuestion.AutoSize = true;
-            this.labelQuestion.Location = new System.Drawing.Point(3, 0);
+            this.labelQuestion.Location = new System.Drawing.Point(3, 228);
             this.labelQuestion.Name = "labelQuestion";
             this.labelQuestion.Size = new System.Drawing.Size(52, 13);
             this.labelQuestion.TabIndex = 0;
@@ -201,23 +205,32 @@
             // textBoxAnswer
             // 
             this.textBoxAnswer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxAnswer.Location = new System.Drawing.Point(230, 3);
+            this.textBoxAnswer.Location = new System.Drawing.Point(201, 231);
             this.textBoxAnswer.Multiline = true;
             this.textBoxAnswer.Name = "textBoxAnswer";
-            this.textBoxAnswer.Size = new System.Drawing.Size(221, 128);
+            this.textBoxAnswer.Size = new System.Drawing.Size(340, 82);
             this.textBoxAnswer.TabIndex = 3;
             // 
             // buttonNext
             // 
             this.buttonNext.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonNext.Location = new System.Drawing.Point(230, 346);
+            this.buttonNext.Location = new System.Drawing.Point(201, 456);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(221, 71);
+            this.buttonNext.Size = new System.Drawing.Size(340, 44);
             this.buttonNext.TabIndex = 6;
             this.buttonNext.Text = "Next Question";
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Visible = false;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(201, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(340, 222);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -242,14 +255,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(334, 420);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(400, 503);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 0);
+            this.label1.Location = new System.Drawing.Point(145, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 0;
@@ -260,7 +273,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 84);
+            this.label2.Location = new System.Drawing.Point(107, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 1;
@@ -271,7 +284,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 168);
+            this.label3.Location = new System.Drawing.Point(110, 200);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 13);
             this.label3.TabIndex = 2;
@@ -282,7 +295,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(112, 252);
+            this.label4.Location = new System.Drawing.Point(145, 300);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 3;
@@ -292,35 +305,35 @@
             // textBoxAskedQuestions
             // 
             this.textBoxAskedQuestions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxAskedQuestions.Location = new System.Drawing.Point(170, 87);
+            this.textBoxAskedQuestions.Location = new System.Drawing.Point(203, 103);
             this.textBoxAskedQuestions.Name = "textBoxAskedQuestions";
             this.textBoxAskedQuestions.ReadOnly = true;
-            this.textBoxAskedQuestions.Size = new System.Drawing.Size(161, 20);
+            this.textBoxAskedQuestions.Size = new System.Drawing.Size(194, 20);
             this.textBoxAskedQuestions.TabIndex = 4;
             // 
             // textBoxCorrectAnswers
             // 
             this.textBoxCorrectAnswers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxCorrectAnswers.Location = new System.Drawing.Point(170, 171);
+            this.textBoxCorrectAnswers.Location = new System.Drawing.Point(203, 203);
             this.textBoxCorrectAnswers.Name = "textBoxCorrectAnswers";
             this.textBoxCorrectAnswers.ReadOnly = true;
-            this.textBoxCorrectAnswers.Size = new System.Drawing.Size(161, 20);
+            this.textBoxCorrectAnswers.Size = new System.Drawing.Size(194, 20);
             this.textBoxCorrectAnswers.TabIndex = 5;
             // 
             // textBoxMistakes
             // 
             this.textBoxMistakes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxMistakes.Location = new System.Drawing.Point(170, 255);
+            this.textBoxMistakes.Location = new System.Drawing.Point(203, 303);
             this.textBoxMistakes.Name = "textBoxMistakes";
             this.textBoxMistakes.ReadOnly = true;
-            this.textBoxMistakes.Size = new System.Drawing.Size(161, 20);
+            this.textBoxMistakes.Size = new System.Drawing.Size(194, 20);
             this.textBoxMistakes.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(86, 336);
+            this.label5.Location = new System.Drawing.Point(119, 400);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 7;
@@ -330,10 +343,10 @@
             // textBoxQuestionsLeft
             // 
             this.textBoxQuestionsLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxQuestionsLeft.Location = new System.Drawing.Point(170, 339);
+            this.textBoxQuestionsLeft.Location = new System.Drawing.Point(203, 403);
             this.textBoxQuestionsLeft.Name = "textBoxQuestionsLeft";
             this.textBoxQuestionsLeft.ReadOnly = true;
-            this.textBoxQuestionsLeft.Size = new System.Drawing.Size(161, 20);
+            this.textBoxQuestionsLeft.Size = new System.Drawing.Size(194, 20);
             this.textBoxQuestionsLeft.TabIndex = 8;
             // 
             // tableLayoutPanel2
@@ -348,24 +361,25 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(800, 426);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(956, 509);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(956, 533);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
-            this.Text = "VocabMaster";
+            this.Text = "LearnMaster";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanelTest.ResumeLayout(false);
             this.tableLayoutPanelTest.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -403,6 +417,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxQuestionsLeft;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

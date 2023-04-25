@@ -1,4 +1,4 @@
-﻿namespace VocabMaster
+﻿namespace LearnMaster
 {
     partial class FormNewDataset
     {

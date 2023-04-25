@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VocabMaster.Properties
+namespace LearnMaster.Properties
 {
 
 

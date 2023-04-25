@@ -1,4 +1,4 @@
-﻿namespace VocabMaster
+﻿namespace LearnMaster
 {
     partial class FormEditDataset
     {
@@ -46,9 +46,14 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonSaveModified = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxEquation = new System.Windows.Forms.CheckBox();
+            this.checkBoxImage = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBoxDataset
@@ -67,7 +72,7 @@
             this.editToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(795, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -83,14 +88,14 @@
             // saveDatasetToolStripMenuItem
             // 
             this.saveDatasetToolStripMenuItem.Name = "saveDatasetToolStripMenuItem";
-            this.saveDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveDatasetToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.saveDatasetToolStripMenuItem.Text = "Save Dataset";
             this.saveDatasetToolStripMenuItem.Click += new System.EventHandler(this.saveDatasetToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -105,28 +110,31 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.45098F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.54902F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxQuestion, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxAnswer, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxDescription, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.buttonSaveNew, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxQuestion, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxAnswer, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxDescription, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.buttonSaveNew, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(169, 25);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.30303F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.30303F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.30303F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.63374F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.63375F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.63375F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.63375F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.46502F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(619, 407);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(3, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 0;
@@ -135,7 +143,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 123);
+            this.label2.Location = new System.Drawing.Point(3, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 1;
@@ -144,7 +152,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 246);
+            this.label3.Location = new System.Drawing.Point(3, 276);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 2;
@@ -153,36 +161,36 @@
             // textBoxQuestion
             // 
             this.textBoxQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxQuestion.Location = new System.Drawing.Point(172, 3);
+            this.textBoxQuestion.Location = new System.Drawing.Point(172, 95);
             this.textBoxQuestion.Multiline = true;
             this.textBoxQuestion.Name = "textBoxQuestion";
-            this.textBoxQuestion.Size = new System.Drawing.Size(444, 117);
+            this.textBoxQuestion.Size = new System.Drawing.Size(444, 86);
             this.textBoxQuestion.TabIndex = 3;
             // 
             // textBoxAnswer
             // 
             this.textBoxAnswer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxAnswer.Location = new System.Drawing.Point(172, 126);
+            this.textBoxAnswer.Location = new System.Drawing.Point(172, 187);
             this.textBoxAnswer.Multiline = true;
             this.textBoxAnswer.Name = "textBoxAnswer";
-            this.textBoxAnswer.Size = new System.Drawing.Size(444, 117);
+            this.textBoxAnswer.Size = new System.Drawing.Size(444, 86);
             this.textBoxAnswer.TabIndex = 4;
             // 
             // textBoxDescription
             // 
             this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxDescription.Location = new System.Drawing.Point(172, 249);
+            this.textBoxDescription.Location = new System.Drawing.Point(172, 279);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(444, 117);
+            this.textBoxDescription.Size = new System.Drawing.Size(444, 86);
             this.textBoxDescription.TabIndex = 5;
             // 
             // buttonSaveNew
             // 
             this.buttonSaveNew.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSaveNew.Location = new System.Drawing.Point(3, 372);
+            this.buttonSaveNew.Location = new System.Drawing.Point(3, 371);
             this.buttonSaveNew.Name = "buttonSaveNew";
-            this.buttonSaveNew.Size = new System.Drawing.Size(163, 32);
+            this.buttonSaveNew.Size = new System.Drawing.Size(163, 33);
             this.buttonSaveNew.TabIndex = 6;
             this.buttonSaveNew.Text = "Save as new";
             this.buttonSaveNew.UseVisualStyleBackColor = true;
@@ -196,11 +204,11 @@
             this.tableLayoutPanel2.Controls.Add(this.buttonSaveModified, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.buttonDelete, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(172, 372);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(172, 371);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(444, 32);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(444, 33);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
             // buttonSaveModified
@@ -208,27 +216,69 @@
             this.buttonSaveModified.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonSaveModified.Location = new System.Drawing.Point(3, 3);
             this.buttonSaveModified.Name = "buttonSaveModified";
-            this.buttonSaveModified.Size = new System.Drawing.Size(216, 26);
+            this.buttonSaveModified.Size = new System.Drawing.Size(216, 27);
             this.buttonSaveModified.TabIndex = 8;
             this.buttonSaveModified.Text = "Save as Modified";
             this.buttonSaveModified.UseVisualStyleBackColor = true;
+            this.buttonSaveModified.Click += new System.EventHandler(this.buttonSaveModified_Click);
             // 
             // buttonDelete
             // 
             this.buttonDelete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonDelete.Location = new System.Drawing.Point(225, 3);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(216, 26);
+            this.buttonDelete.Size = new System.Drawing.Size(216, 27);
             this.buttonDelete.TabIndex = 9;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Question-Settings";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.checkBoxImage);
+            this.panel1.Controls.Add(this.checkBoxEquation);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(172, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(444, 86);
+            this.panel1.TabIndex = 9;
+            // 
+            // checkBoxEquation
+            // 
+            this.checkBoxEquation.AutoSize = true;
+            this.checkBoxEquation.Location = new System.Drawing.Point(31, 32);
+            this.checkBoxEquation.Name = "checkBoxEquation";
+            this.checkBoxEquation.Size = new System.Drawing.Size(68, 17);
+            this.checkBoxEquation.TabIndex = 0;
+            this.checkBoxEquation.Text = "Equation";
+            this.checkBoxEquation.UseVisualStyleBackColor = true;
+            this.checkBoxEquation.CheckedChanged += new System.EventHandler(this.checkBoxEquation_CheckedChanged);
+            // 
+            // checkBoxImage
+            // 
+            this.checkBoxImage.AutoSize = true;
+            this.checkBoxImage.Location = new System.Drawing.Point(139, 32);
+            this.checkBoxImage.Name = "checkBoxImage";
+            this.checkBoxImage.Size = new System.Drawing.Size(55, 17);
+            this.checkBoxImage.TabIndex = 1;
+            this.checkBoxImage.Text = "Image";
+            this.checkBoxImage.UseVisualStyleBackColor = true;
+            this.checkBoxImage.CheckedChanged += new System.EventHandler(this.checkBoxImage_CheckedChanged);
+            // 
             // FormEditDataset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(795, 438);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.listBoxDataset);
             this.Controls.Add(this.menuStrip1);
@@ -242,6 +292,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,5 +318,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button buttonSaveModified;
         private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox checkBoxImage;
+        private System.Windows.Forms.CheckBox checkBoxEquation;
     }
 }

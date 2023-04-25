@@ -1,52 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VocabMaster
+namespace LearnMaster
 {
     [Serializable]
     public class Dataset 
     {
-        public string question { get; set; }
-        public string description { get; set; }
-        public string solution { get; set; }
-        public bool asked { get; set; }
-        public bool answeredIncorrect { get; set; }
+        public string _question { get; set; }
+        public string _description { get; set; }
+        public string _solution { get; set; }
+        public bool _asked { get; set; }
+        public bool _answeredIncorrect { get; set; }
+        public bool _isEquation { get; set; }
+        public bool _isImage { get; set; }
+        public Bitmap _image { get; set; }
+        public Bitmap _equationBitmap { get; set; }
 
-        public Dataset(string question, string description, string solution)
+        public Dataset(string question, string description, string solution, bool isEquation = false, bool isImage = false, Bitmap image = null, Bitmap equationBitmap = null)
         {
-            this.question = question;
-            this.description = description;
-            this.solution = solution;
-            asked = false;
-            answeredIncorrect = false;
+            this._question = question;
+            this._description = description;
+            this._solution = solution;
+            _asked = false;
+            _answeredIncorrect = false;
+            _isEquation = isEquation;
+            _image = image;
+            _isImage = isImage;
+            _equationBitmap = equationBitmap;
         }
 
         public void ResetExamData()
         {
-            asked = false;
-            answeredIncorrect = false;
+            _asked = false;
+            _answeredIncorrect = false;
         }
 
         public bool AnsweredCorrect(Dataset other)
         {
-            string[] correctSolutions = this.solution.Split(';');
-            string[] correctDescriptions = this.description.Split(';');
+            string[] correctSolutions = this._solution.Split(';');
+            string[] correctDescriptions = this._description.Split(';');
             bool solutionCorrect = false;
             bool descriptionCorrect = false;
 
             foreach (string s in correctSolutions)
             {
-                if (solutionCorrect = other.solution.ToLower().Trim().Replace(" ", "") == s.ToLower().Trim().Replace(" ", ""))
+                if (solutionCorrect = other._solution.ToLower().Trim().Replace(" ", "") == s.ToLower().Trim().Replace(" ", ""))
                 {
                     break;
                 }
             }
             foreach (string s in correctDescriptions)
             {
-                if (descriptionCorrect = other.description.ToLower().Trim().Replace(" ", "") == s.ToLower().Trim().Replace(" ", ""))
+                if (descriptionCorrect = other._description.ToLower().Trim().Replace(" ", "") == s.ToLower().Trim().Replace(" ", ""))
                 {
                     break;
                 }
@@ -58,14 +67,14 @@ namespace VocabMaster
         public override bool Equals(object obj)
         {
             return obj is Dataset dataset &&
-                   question == dataset.question &&
-                   description == dataset.description &&
-                   solution == dataset.solution;
+                   _question == dataset._question &&
+                   _description == dataset._description &&
+                   _solution == dataset._solution;
         }
 
         public override string ToString()
         {
-            return question;
+            return _question;
         }
     }
 }

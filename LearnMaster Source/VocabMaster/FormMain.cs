@@ -1,4 +1,8 @@
-﻿using System;
+﻿using CSharpMath.Atom;
+using CSharpMath.Rendering.FrontEnd;
+using CSharpMath.SkiaSharp;
+using SkiaSharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VocabMaster
+namespace LearnMaster
 {
     public partial class FormMain : Form
     {
@@ -25,6 +29,7 @@ namespace VocabMaster
         public FormMain()
         {
             InitializeComponent();
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void loadDatasetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,8 +97,46 @@ namespace VocabMaster
 
         private void SetTextBoxes(Dataset ds)
         {
-            labelQuestion.Text = ds.question;
+            if (ds._isEquation)
+            {
+
+            }
+            if (ds._isImage)
+            {
+                pictureBox1.Image = ds._image;
+                pictureBox1.Visible = true;
+            }
+            labelQuestion.Text = ds._question;
         }
+
+        //private void RenderMathExpression()
+        //{
+        //    // Erstelle eine neue Instanz der MathPainter-Klasse mit einer SkiaSharp-Implementierung
+        //    var painter = new MathPainter<FormattedTextBuilder, SKCanvas(TextPainter.)>(TextPainter.Instance);
+
+        //    // Definiere den zu rendernden mathematischen Ausdruck
+        //    var mathText = "x^2 + y^2 = r^2";
+
+        //    // Erstelle eine neue Display-Instanz für den mathematischen Ausdruck
+        //    var display = painter.CreateLine(new LaTeXParser(), mathText, 16, CSharpMath.FontStyle.Default);
+
+        //    // Erstelle eine SkiaSharp-Bitmap, die groß genug ist, um die Anzeige des mathematischen Ausdrucks aufzunehmen
+        //    var bitmap = new SKBitmap((int)display.Width, (int)display.Height);
+        //    using var surface = SKSurface.Create(bitmap.Info);
+        //    var canvas = surface.Canvas;
+
+        //    // Rendere den mathematischen Ausdruck auf die Bitmap
+        //    display.Draw(canvas, SKPoint.Empty);
+
+        //    // Konvertiere die SkiaSharp-Bitmap in eine System.Drawing.Bitmap, um sie im Label anzuzeigen
+        //    var drawnBitmap = bitmap.ToBitmap();
+
+        //    // Zeige das gerenderte Bild im Label an
+        //    label1.Image = drawnBitmap;
+        //    label1.Size = drawnBitmap.Size;
+        //    label1.AutoSize = false;
+        //    label1.TextAlign = ContentAlignment.MiddleLeft;
+        //}
 
         private Dataset SelectRandomDataset(List<Dataset> datasets)
         {
@@ -102,7 +145,7 @@ namespace VocabMaster
             this.index = index;
 
             Dataset ds = datasets[index];
-            ds.asked = true;
+            ds._asked = true;
             datasets.Remove(ds);
             return ds;
         }
@@ -120,7 +163,7 @@ namespace VocabMaster
             else
             {
                 textBoxResult.Text = "Incorrect! Correct answer now visible!";
-                textBoxAnswer.Text = currentData.solution;
+                textBoxAnswer.Text = currentData._solution;
                 textBoxMistakes.Text = (int.Parse(textBoxMistakes.Text) + 1).ToString();
             }
         }
@@ -129,6 +172,7 @@ namespace VocabMaster
         {
             buttonCheck.Enabled = true;
             buttonNext.Visible = false;
+            pictureBox1.Visible = false;
             if (--questionsLeft > 0)
             {
                 currentData = SelectRandomDataset(notSelectedDataSet);
@@ -147,7 +191,6 @@ namespace VocabMaster
             textBoxQuestionsLeft.Text = questionsLeft.ToString();
             textBoxAnswer.Text = "";
             textBoxDescription.Text = "";
-
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
