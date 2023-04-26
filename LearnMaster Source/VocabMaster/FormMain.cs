@@ -59,7 +59,8 @@ namespace LearnMaster
             try
             {
                 var bmp = new Bitmap(painter.DrawAsStream());
-                pictureBoxImage.Image = bmp;
+                pictureBoxEquation.Visible = true;
+                pictureBoxEquation.Image = bmp;
             }
             catch (Exception ex)
             {

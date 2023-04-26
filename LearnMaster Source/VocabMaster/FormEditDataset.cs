@@ -50,6 +50,10 @@ namespace LearnMaster
                 textBoxAnswer.Text = ds._solution;
                 textBoxDescription.Text = ds._description;
                 textBoxQuestion.Text = ds._question;
+                isEquation = ds._isEquation;
+                checkBoxEquation.Checked = ds._isEquation;
+                textBoxEquation.Text = ds._equation;
+                isImage = ds._isImage;
             }
             else
             {
