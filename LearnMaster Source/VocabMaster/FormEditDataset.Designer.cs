@@ -48,8 +48,9 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.checkBoxEquation = new System.Windows.Forms.CheckBox();
             this.checkBoxImage = new System.Windows.Forms.CheckBox();
+            this.checkBoxEquation = new System.Windows.Forms.CheckBox();
+            this.textBoxEquation = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -244,6 +245,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBoxEquation);
             this.panel1.Controls.Add(this.checkBoxImage);
             this.panel1.Controls.Add(this.checkBoxEquation);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -252,10 +254,21 @@
             this.panel1.Size = new System.Drawing.Size(444, 86);
             this.panel1.TabIndex = 9;
             // 
+            // checkBoxImage
+            // 
+            this.checkBoxImage.AutoSize = true;
+            this.checkBoxImage.Location = new System.Drawing.Point(334, 32);
+            this.checkBoxImage.Name = "checkBoxImage";
+            this.checkBoxImage.Size = new System.Drawing.Size(55, 17);
+            this.checkBoxImage.TabIndex = 1;
+            this.checkBoxImage.Text = "Image";
+            this.checkBoxImage.UseVisualStyleBackColor = true;
+            this.checkBoxImage.CheckedChanged += new System.EventHandler(this.checkBoxImage_CheckedChanged);
+            // 
             // checkBoxEquation
             // 
             this.checkBoxEquation.AutoSize = true;
-            this.checkBoxEquation.Location = new System.Drawing.Point(31, 32);
+            this.checkBoxEquation.Location = new System.Drawing.Point(24, 17);
             this.checkBoxEquation.Name = "checkBoxEquation";
             this.checkBoxEquation.Size = new System.Drawing.Size(68, 17);
             this.checkBoxEquation.TabIndex = 0;
@@ -263,16 +276,12 @@
             this.checkBoxEquation.UseVisualStyleBackColor = true;
             this.checkBoxEquation.CheckedChanged += new System.EventHandler(this.checkBoxEquation_CheckedChanged);
             // 
-            // checkBoxImage
+            // textBoxEquation
             // 
-            this.checkBoxImage.AutoSize = true;
-            this.checkBoxImage.Location = new System.Drawing.Point(139, 32);
-            this.checkBoxImage.Name = "checkBoxImage";
-            this.checkBoxImage.Size = new System.Drawing.Size(55, 17);
-            this.checkBoxImage.TabIndex = 1;
-            this.checkBoxImage.Text = "Image";
-            this.checkBoxImage.UseVisualStyleBackColor = true;
-            this.checkBoxImage.CheckedChanged += new System.EventHandler(this.checkBoxImage_CheckedChanged);
+            this.textBoxEquation.Location = new System.Drawing.Point(24, 40);
+            this.textBoxEquation.Name = "textBoxEquation";
+            this.textBoxEquation.Size = new System.Drawing.Size(214, 20);
+            this.textBoxEquation.TabIndex = 2;
             // 
             // FormEditDataset
             // 
@@ -322,5 +331,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox checkBoxImage;
         private System.Windows.Forms.CheckBox checkBoxEquation;
+        private System.Windows.Forms.TextBox textBoxEquation;
     }
 }

@@ -68,7 +68,9 @@ namespace LearnMaster
         {
             if (textBoxQuestion.Text.Length > 0 && textBoxAnswer.Text.Length > 0)
             {
-                listBoxDataset.Items.Add(new Dataset(textBoxQuestion.Text, textBoxDescription.Text, textBoxAnswer.Text, isEquation, isImage, bmp));
+                listBoxDataset.Items.Add(new Dataset(textBoxQuestion.Text, textBoxDescription.Text, textBoxAnswer.Text, 
+                    (textBoxEquation.Text.Trim().Length > 0) && isEquation, isImage, bmp, 
+                    equation: ((textBoxEquation.Text.Trim().Length > 0) && isEquation) ? textBoxEquation.Text.Trim() : ""));
             }
         }
 
@@ -93,9 +95,10 @@ namespace LearnMaster
                 ds._isImage = true;
                 ds._image = bmp;
             }
-            if (isEquation)
+            if (isEquation && textBoxEquation.Text.Trim().Length > 0)
             {
                 ds._isEquation = true;
+                ds._equation = textBoxEquation.Text;
             }
         }
 

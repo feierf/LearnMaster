@@ -18,9 +18,9 @@ namespace LearnMaster
         public bool _isEquation { get; set; }
         public bool _isImage { get; set; }
         public Bitmap _image { get; set; }
-        public Bitmap _equationBitmap { get; set; }
+        public string _equation { get; set; }
 
-        public Dataset(string question, string description, string solution, bool isEquation = false, bool isImage = false, Bitmap image = null, Bitmap equationBitmap = null)
+        public Dataset(string question, string description, string solution, bool isEquation = false, bool isImage = false, Bitmap image = null, string equation = "")
         {
             this._question = question;
             this._description = description;
@@ -30,7 +30,7 @@ namespace LearnMaster
             _isEquation = isEquation;
             _image = image;
             _isImage = isImage;
-            _equationBitmap = equationBitmap;
+            _equation = equation;
         }
 
         public void ResetExamData()

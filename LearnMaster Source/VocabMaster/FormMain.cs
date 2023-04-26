@@ -29,7 +29,8 @@ namespace LearnMaster
         public FormMain()
         {
             InitializeComponent();
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxImage.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxEquation.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void loadDatasetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,6 +51,20 @@ namespace LearnMaster
                     }
                 }
             }
+        }
+
+        private void RenderEquation(string equation)
+        {
+            //var painter = new MathPainter { LaTeX = equation };
+            //try
+            //{
+            //    var bmp = painter.
+            //    pictureBoxImage.Image = bmp;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message + "; " + ex.StackTrace);
+            //}
         }
 
         private void editDatasetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,46 +112,18 @@ namespace LearnMaster
 
         private void SetTextBoxes(Dataset ds)
         {
-            if (ds._isEquation)
+            if (ds._isEquation && ds._equation.Length > 0)
             {
-
+                RenderEquation(ds._equation);
+                pictureBoxEquation.Visible = true;
             }
             if (ds._isImage)
             {
-                pictureBox1.Image = ds._image;
-                pictureBox1.Visible = true;
+                pictureBoxImage.Image = ds._image;
+                pictureBoxImage.Visible = true;
             }
             labelQuestion.Text = ds._question;
         }
-
-        //private void RenderMathExpression()
-        //{
-        //    // Erstelle eine neue Instanz der MathPainter-Klasse mit einer SkiaSharp-Implementierung
-        //    var painter = new MathPainter<FormattedTextBuilder, SKCanvas(TextPainter.)>(TextPainter.Instance);
-
-        //    // Definiere den zu rendernden mathematischen Ausdruck
-        //    var mathText = "x^2 + y^2 = r^2";
-
-        //    // Erstelle eine neue Display-Instanz für den mathematischen Ausdruck
-        //    var display = painter.CreateLine(new LaTeXParser(), mathText, 16, CSharpMath.FontStyle.Default);
-
-        //    // Erstelle eine SkiaSharp-Bitmap, die groß genug ist, um die Anzeige des mathematischen Ausdrucks aufzunehmen
-        //    var bitmap = new SKBitmap((int)display.Width, (int)display.Height);
-        //    using var surface = SKSurface.Create(bitmap.Info);
-        //    var canvas = surface.Canvas;
-
-        //    // Rendere den mathematischen Ausdruck auf die Bitmap
-        //    display.Draw(canvas, SKPoint.Empty);
-
-        //    // Konvertiere die SkiaSharp-Bitmap in eine System.Drawing.Bitmap, um sie im Label anzuzeigen
-        //    var drawnBitmap = bitmap.ToBitmap();
-
-        //    // Zeige das gerenderte Bild im Label an
-        //    label1.Image = drawnBitmap;
-        //    label1.Size = drawnBitmap.Size;
-        //    label1.AutoSize = false;
-        //    label1.TextAlign = ContentAlignment.MiddleLeft;
-        //}
 
         private Dataset SelectRandomDataset(List<Dataset> datasets)
         {
@@ -172,7 +159,8 @@ namespace LearnMaster
         {
             buttonCheck.Enabled = true;
             buttonNext.Visible = false;
-            pictureBox1.Visible = false;
+            pictureBoxImage.Visible = false;
+            pictureBoxImage.Visible = false;
             if (--questionsLeft > 0)
             {
                 currentData = SelectRandomDataset(notSelectedDataSet);

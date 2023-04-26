@@ -45,7 +45,7 @@
             this.labelQuestion = new System.Windows.Forms.Label();
             this.textBoxAnswer = new System.Windows.Forms.TextBox();
             this.buttonNext = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,11 +57,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxQuestionsLeft = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBoxEquation = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanelTest.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEquation)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -141,7 +143,8 @@
             this.tableLayoutPanelTest.Controls.Add(this.labelQuestion, 0, 1);
             this.tableLayoutPanelTest.Controls.Add(this.textBoxAnswer, 1, 1);
             this.tableLayoutPanelTest.Controls.Add(this.buttonNext, 1, 4);
-            this.tableLayoutPanelTest.Controls.Add(this.pictureBox1, 1, 0);
+            this.tableLayoutPanelTest.Controls.Add(this.pictureBoxImage, 1, 0);
+            this.tableLayoutPanelTest.Controls.Add(this.pictureBoxEquation, 0, 0);
             this.tableLayoutPanelTest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelTest.Location = new System.Drawing.Point(409, 3);
             this.tableLayoutPanelTest.Name = "tableLayoutPanelTest";
@@ -223,14 +226,14 @@
             this.buttonNext.Visible = false;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
-            // pictureBox1
+            // pictureBoxImage
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(201, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(340, 222);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxImage.Location = new System.Drawing.Point(201, 3);
+            this.pictureBoxImage.Name = "pictureBoxImage";
+            this.pictureBoxImage.Size = new System.Drawing.Size(340, 222);
+            this.pictureBoxImage.TabIndex = 7;
+            this.pictureBoxImage.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -364,6 +367,15 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(956, 509);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
+            // pictureBoxEquation
+            // 
+            this.pictureBoxEquation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxEquation.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxEquation.Name = "pictureBoxEquation";
+            this.pictureBoxEquation.Size = new System.Drawing.Size(192, 222);
+            this.pictureBoxEquation.TabIndex = 8;
+            this.pictureBoxEquation.TabStop = false;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,10 +391,11 @@
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanelTest.ResumeLayout(false);
             this.tableLayoutPanelTest.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEquation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,7 +430,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxQuestionsLeft;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxImage;
+        private System.Windows.Forms.PictureBox pictureBoxEquation;
     }
 }
 
