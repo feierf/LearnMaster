@@ -55,16 +55,16 @@ namespace LearnMaster
 
         private void RenderEquation(string equation)
         {
-            //var painter = new MathPainter { LaTeX = equation };
-            //try
-            //{
-            //    var bmp = painter.
-            //    pictureBoxImage.Image = bmp;
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message + "; " + ex.StackTrace);
-            //}
+            var painter = new MathPainter { LaTeX = equation };
+            try
+            {
+                var bmp = new Bitmap(painter.DrawAsStream());
+                pictureBoxImage.Image = bmp;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "; " + ex.StackTrace);
+            }
         }
 
         private void editDatasetToolStripMenuItem_Click(object sender, EventArgs e)
