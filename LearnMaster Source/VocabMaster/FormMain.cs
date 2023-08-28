@@ -13,6 +13,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VocabMaster;
 
 namespace LearnMaster
 {
@@ -31,6 +32,9 @@ namespace LearnMaster
             InitializeComponent();
             pictureBoxImage.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxEquation.SizeMode = PictureBoxSizeMode.Zoom;
+
+            openStudyModeToolStripMenuItem.Enabled = false;
+            startTestToolStripMenuItem.Enabled = false;
         }
 
         private void loadDatasetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,6 +52,12 @@ namespace LearnMaster
                     {
                         BinaryFormatter bf = new BinaryFormatter();
                         datasetList = bf.Deserialize(s) as List<Dataset>;
+                    }
+
+                    if (datasetList != null)
+                    {
+                        openStudyModeToolStripMenuItem.Enabled = true;
+                        startTestToolStripMenuItem.Enabled = true;
                     }
                 }
             }
@@ -85,6 +95,11 @@ namespace LearnMaster
         private void Fed_DatasetUpdated(object sender, FormEditDataset.DatasetUpdatedEventArgs e)
         {
             this.datasetList = e.list;
+            if (datasetList != null)
+            {
+                openStudyModeToolStripMenuItem.Enabled = true;
+                startTestToolStripMenuItem.Enabled = true;
+            }
         }
 
         private void createNewDatasetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -186,6 +201,12 @@ namespace LearnMaster
         {
             this.Close();
             Application.Exit();
+        }
+
+        private void openStudyModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormStudy formStudy = new FormStudy(datasetList);
+            formStudy.Show();
         }
     }
 }
