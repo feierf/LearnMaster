@@ -33,6 +33,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadDatasetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewDatasetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openStudyModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +59,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxQuestionsLeft = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.openStudyModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanelTest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
@@ -93,28 +93,35 @@
             // loadDatasetToolStripMenuItem
             // 
             this.loadDatasetToolStripMenuItem.Name = "loadDatasetToolStripMenuItem";
-            this.loadDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadDatasetToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.loadDatasetToolStripMenuItem.Text = "Load Dataset";
             this.loadDatasetToolStripMenuItem.Click += new System.EventHandler(this.loadDatasetToolStripMenuItem_Click);
             // 
             // createNewDatasetToolStripMenuItem
             // 
             this.createNewDatasetToolStripMenuItem.Name = "createNewDatasetToolStripMenuItem";
-            this.createNewDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createNewDatasetToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.createNewDatasetToolStripMenuItem.Text = "Create new Dataset";
             this.createNewDatasetToolStripMenuItem.Click += new System.EventHandler(this.createNewDatasetToolStripMenuItem_Click);
+            // 
+            // openStudyModeToolStripMenuItem
+            // 
+            this.openStudyModeToolStripMenuItem.Name = "openStudyModeToolStripMenuItem";
+            this.openStudyModeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.openStudyModeToolStripMenuItem.Text = "Open Study-Mode";
+            this.openStudyModeToolStripMenuItem.Click += new System.EventHandler(this.openStudyModeToolStripMenuItem_Click);
             // 
             // startTestToolStripMenuItem
             // 
             this.startTestToolStripMenuItem.Name = "startTestToolStripMenuItem";
-            this.startTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.startTestToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.startTestToolStripMenuItem.Text = "Start Test";
             this.startTestToolStripMenuItem.Click += new System.EventHandler(this.startTestToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -129,7 +136,7 @@
             // editDatasetToolStripMenuItem
             // 
             this.editDatasetToolStripMenuItem.Name = "editDatasetToolStripMenuItem";
-            this.editDatasetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editDatasetToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.editDatasetToolStripMenuItem.Text = "Edit Dataset";
             this.editDatasetToolStripMenuItem.Click += new System.EventHandler(this.editDatasetToolStripMenuItem_Click);
             // 
@@ -377,13 +384,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(956, 509);
             this.tableLayoutPanel2.TabIndex = 3;
-            // 
-            // openStudyModeToolStripMenuItem
-            // 
-            this.openStudyModeToolStripMenuItem.Name = "openStudyModeToolStripMenuItem";
-            this.openStudyModeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openStudyModeToolStripMenuItem.Text = "Open Study-Mode";
-            this.openStudyModeToolStripMenuItem.Click += new System.EventHandler(this.openStudyModeToolStripMenuItem_Click);
             // 
             // FormMain
             // 
