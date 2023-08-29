@@ -33,6 +33,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadDatasetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewDatasetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openStudyModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +47,7 @@
             this.textBoxAnswer = new System.Windows.Forms.TextBox();
             this.buttonNext = new System.Windows.Forms.Button();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
+            this.pictureBoxEquation = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,13 +59,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxQuestionsLeft = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBoxEquation = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanelTest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEquation)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEquation)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -82,6 +83,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loadDatasetToolStripMenuItem,
             this.createNewDatasetToolStripMenuItem,
+            this.openStudyModeToolStripMenuItem,
             this.startTestToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -101,6 +103,13 @@
             this.createNewDatasetToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.createNewDatasetToolStripMenuItem.Text = "Create new Dataset";
             this.createNewDatasetToolStripMenuItem.Click += new System.EventHandler(this.createNewDatasetToolStripMenuItem_Click);
+            // 
+            // openStudyModeToolStripMenuItem
+            // 
+            this.openStudyModeToolStripMenuItem.Name = "openStudyModeToolStripMenuItem";
+            this.openStudyModeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.openStudyModeToolStripMenuItem.Text = "Open Study-Mode";
+            this.openStudyModeToolStripMenuItem.Click += new System.EventHandler(this.openStudyModeToolStripMenuItem_Click);
             // 
             // startTestToolStripMenuItem
             // 
@@ -235,6 +244,15 @@
             this.pictureBoxImage.TabIndex = 7;
             this.pictureBoxImage.TabStop = false;
             // 
+            // pictureBoxEquation
+            // 
+            this.pictureBoxEquation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxEquation.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxEquation.Name = "pictureBoxEquation";
+            this.pictureBoxEquation.Size = new System.Drawing.Size(192, 222);
+            this.pictureBoxEquation.TabIndex = 8;
+            this.pictureBoxEquation.TabStop = false;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -367,15 +385,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(956, 509);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // pictureBoxEquation
-            // 
-            this.pictureBoxEquation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxEquation.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxEquation.Name = "pictureBoxEquation";
-            this.pictureBoxEquation.Size = new System.Drawing.Size(192, 222);
-            this.pictureBoxEquation.TabIndex = 8;
-            this.pictureBoxEquation.TabStop = false;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -392,10 +401,10 @@
             this.tableLayoutPanelTest.ResumeLayout(false);
             this.tableLayoutPanelTest.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEquation)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEquation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,6 +441,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBoxImage;
         private System.Windows.Forms.PictureBox pictureBoxEquation;
+        private System.Windows.Forms.ToolStripMenuItem openStudyModeToolStripMenuItem;
     }
 }
 
