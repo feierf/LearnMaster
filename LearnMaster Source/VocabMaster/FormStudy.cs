@@ -42,16 +42,58 @@ namespace VocabMaster
             textBoxDescription.Text = dataSet._description;
             labelQuestionNumber.Text = $"{index + 1}/{_dataSetList.Count}";
 
-            if (dataSet._isEquation && dataSet._equation.Length > 0) 
+            if (!dataSet._isEquation && !dataSet._isImage)
             {
-                RenderEquation(dataSet._equation);
-                pictureBoxEquation.Visible = true;
+                tableLayoutPanelImageEquation.Visible = false;
+                tableLayoutPanel3.RowStyles[1].SizeType = SizeType.Percent;
+                tableLayoutPanel3.RowStyles[1].Height = 0;
+                tableLayoutPanel3.RowStyles[2].SizeType = SizeType.Percent;
+                tableLayoutPanel3.RowStyles[2].Height = 30;
+                tableLayoutPanel3.RowStyles[3].SizeType = SizeType.Percent;
+                tableLayoutPanel3.RowStyles[3].Height = 70;
             }
-            if (dataSet._isImage)
+            else
             {
-                pictureBoxImage.Image = dataSet._image;
-                pictureBoxImage.Visible = true;
+                tableLayoutPanel3.RowStyles[2].SizeType = SizeType.Absolute;
+                tableLayoutPanel3.RowStyles[2].Height = 60;
+                tableLayoutPanel3.RowStyles[1].SizeType = SizeType.Percent;
+                tableLayoutPanel3.RowStyles[1].Height = 100;
+                tableLayoutPanel3.RowStyles[3].SizeType = SizeType.AutoSize;
+                tableLayoutPanelImageEquation.Visible = true;
+                if (dataSet._isEquation && dataSet._equation.Length > 0)
+                {
+                    RenderEquation(dataSet._equation);
+                    pictureBoxEquation.Visible = true;
+                }
+                if (dataSet._isImage)
+                {
+                    pictureBoxImage.Image = dataSet._image;
+                    pictureBoxImage.Visible = true;
+                }
             }
+
+            if (dataSet._description.Length == 0)
+            {
+                tableLayoutPanelDescriptionResult.ColumnStyles[1].SizeType = SizeType.Percent;
+                tableLayoutPanelDescriptionResult.ColumnStyles[1].Width = 0;
+            }
+            else
+            {
+                tableLayoutPanelDescriptionResult.ColumnStyles[1].SizeType = SizeType.Percent;
+                tableLayoutPanelDescriptionResult.ColumnStyles[1].Width = 50;
+            }
+
+            if (dataSet._solution.Length == 0)
+            {
+                tableLayoutPanelDescriptionResult.ColumnStyles[0].SizeType = SizeType.Percent;
+                tableLayoutPanelDescriptionResult.ColumnStyles[0].Width = 0;
+            }
+            else
+            {
+                tableLayoutPanelDescriptionResult.ColumnStyles[0].SizeType = SizeType.Percent;
+                tableLayoutPanelDescriptionResult.ColumnStyles[0].Width = 50;
+            }
+
         }
 
         private void RenderEquation(string equation)
